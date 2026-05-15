@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEIWEI母親節｜母親節檔期結案報告 04/23–05/13</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=DM+Mono:wght@400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1410; --paper: #f5f0e8; --warm-mid: #e8e0d0;
+  --accent: #b5452a; --accent-light: #f5ddd8;
+  --teal: #2a7c6f; --teal-light: #d0ece8;
+  --gold: #b5872a; --gold-light: #f5eacc;
+  --rose: #c45c7a; --rose-light: #f7dde6;
+  --rule: #c8bfad; --muted: #7a7060;
+  --mono: 'DM Mono', monospace;
+  --serif: 'Noto Serif TC', serif;
+  --sans: 'Noto Sans TC', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; -webkit-text-size-adjust: 100%; }
+
+.masthead { border-bottom: 2px solid var(--ink); padding: 1.5rem 1.25rem 1.1rem; position: relative; overflow: hidden; }
+.masthead::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: repeating-linear-gradient(90deg, var(--rose) 0, var(--rose) 14px, var(--accent) 14px, var(--accent) 28px, var(--gold) 28px, var(--gold) 42px, transparent 42px, transparent 46px); }
+.masthead-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; flex-wrap: wrap; gap: 2px; }
+.brand { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+.report-date { font-family: var(--mono); font-size: 10px; color: var(--muted); text-align: right; }
+.masthead-badge { display: inline-block; background: var(--rose); color: #fff; font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; padding: 2px 10px; border-radius: 2px; margin-bottom: 0.5rem; }
+.masthead-title { font-family: var(--serif); font-size: clamp(1.5rem, 6.5vw, 2.6rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 0.35rem; }
+.masthead-title span { color: var(--rose); }
+.masthead-sub { font-size: 12px; color: var(--muted); letter-spacing: 0.05em; }
+
+.body-wrap { padding: 1.1rem 1rem 3rem; max-width: 1100px; margin: 0 auto; }
+.section { margin-bottom: 1.75rem; }
+.section-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 0.55rem; margin-bottom: 0.9rem; }
+
+.kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1.5px solid var(--ink); margin-bottom: 1.75rem; }
+.kpi-item { padding: 0.9rem 1rem; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.kpi-item:nth-child(2n) { border-right: none; }
+.kpi-item:nth-child(3), .kpi-item:nth-child(4) { border-bottom: none; }
+.kpi-label { font-size: 11px; color: var(--muted); letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+.kpi-val { font-family: var(--serif); font-size: clamp(1.2rem, 5vw, 1.9rem); font-weight: 700; line-height: 1.1; }
+.kpi-val.rose { color: var(--rose); } .kpi-val.teal { color: var(--teal); } .kpi-val.gold { color: var(--gold); }
+.kpi-sub { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: 0.2rem; line-height: 1.4; }
+
+.period-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.75rem; }
+.period-card { padding: 1rem; border: 1.5px solid var(--rule); }
+.period-card.april { border-color: var(--gold); } .period-card.may { border-color: var(--rose); }
+.period-tag { display: inline-block; font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; padding: 1px 8px; margin-bottom: 0.6rem; }
+.period-tag.april { background: var(--gold-light); color: var(--gold); } .period-tag.may { background: var(--rose-light); color: var(--rose); }
+.period-num { font-family: var(--serif); font-size: clamp(1.4rem, 5vw, 2rem); font-weight: 700; line-height: 1.1; }
+.period-sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+.two-col { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 600px) { .two-col { grid-template-columns: 1fr 1fr; } }
+
+.chart-card { background: #fff; border: 1px solid var(--rule); padding: 0.9rem 1rem; }
+.card-title { font-size: 11px; font-weight: 500; letter-spacing: 0.07em; color: var(--muted); margin-bottom: 0.7rem; text-transform: uppercase; }
+.chart-wrap { position: relative; height: 200px; }
+
+.data-table { width: 100%; border-collapse: collapse; }
+.data-table th { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 5px 7px; border-bottom: 1px solid var(--ink); }
+.data-table td { padding: 6px 7px; border-bottom: 1px solid var(--warm-mid); font-size: 12px; }
+.data-table tr:last-child td { border-bottom: none; }
+.data-table .tot td { background: var(--warm-mid); font-weight: 600; border-top: 1px solid var(--rule); }
+.nr { text-align: right; font-family: var(--mono); font-size: 11px; }
+
+.bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
+.bar-label { font-size: 11px; width: 110px; flex-shrink: 0; color: var(--ink); line-height: 1.3; }
+.bar-track { flex: 1; background: var(--warm-mid); border-radius: 2px; height: 7px; overflow: hidden; }
+.bar-fill { height: 7px; border-radius: 2px; }
+.bar-num { font-family: var(--mono); font-size: 10px; color: var(--muted); width: 80px; text-align: right; flex-shrink: 0; }
+
+.gift-box { background: var(--rose-light); border: 1px solid #e0afc0; padding: 0.9rem 1rem; margin-top: 1rem; }
+.gift-box-title { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--rose); margin-bottom: 0.6rem; }
+.gift-row { display: flex; justify-content: space-between; font-size: 12px; padding: 4px 0; border-bottom: 1px solid rgba(196,92,122,0.15); }
+.gift-row:last-child { border-bottom: none; }
+
+.cancel-grid { display: grid; grid-template-columns: 1fr; gap: 0.7rem; }
+@media (min-width: 600px) { .cancel-grid { grid-template-columns: 1fr 1fr; } }
+.cancel-card { border: 1px solid var(--rule); padding: 0.8rem 1rem; background: #fff; position: relative; }
+.cancel-card::before { content: '取消'; position: absolute; top: 0.6rem; right: 0.8rem; font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; background: var(--accent-light); color: var(--accent); padding: 1px 6px; border-radius: 2px; }
+.cancel-name { font-weight: 500; font-size: 13px; margin-bottom: 2px; }
+.cancel-meta { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-bottom: 6px; }
+.cancel-amt { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--accent); }
+.cancel-tag { display: inline-block; font-family: var(--mono); font-size: 10px; padding: 1px 7px; border-radius: 2px; margin-top: 4px; }
+.tag-fail { background: #fde8e8; color: #c0392b; } .tag-unpaid { background: var(--gold-light); color: var(--gold); } .tag-refund { background: var(--teal-light); color: var(--teal); }
+
+.note-group { border: 1px solid var(--rule); background: #fff; margin-bottom: 0.9rem; overflow: hidden; }
+.note-group-header { display: flex; justify-content: space-between; align-items: center; padding: 0.65rem 1rem; border-bottom: 1px solid var(--warm-mid); background: var(--paper); flex-wrap: wrap; gap: 6px; }
+.note-group-title { font-size: 13px; font-weight: 500; }
+.note-group-right { display: flex; align-items: center; gap: 8px; }
+.note-count { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.note-content { padding: 0.5rem 1rem; font-size: 12px; color: var(--muted); border-bottom: 1px solid var(--warm-mid); background: #fafaf8; font-style: italic; line-height: 1.5; }
+.note-orders { padding: 0 1rem; }
+.note-row { display: flex; justify-content: space-between; align-items: center; font-size: 12px; padding: 5px 0; border-bottom: 1px solid var(--warm-mid); flex-wrap: wrap; gap: 4px; }
+.note-row:last-child { border-bottom: none; }
+.note-row-right { display: flex; gap: 10px; align-items: center; font-family: var(--mono); font-size: 11px; }
+.note-row-date { color: var(--muted); }
+.note-footer { padding: 0.5rem 1rem 0.65rem; font-size: 11px; color: var(--muted); background: #fafaf8; border-top: 1px solid var(--warm-mid); }
+
+.action-tag { display: inline-block; font-size: 10px; padding: 1px 7px; border-radius: 2px; font-family: var(--mono); }
+.action-needed { background: #fff3cd; color: #856404; }
+.action-done { background: var(--teal-light); color: var(--teal); }
+.status-cancel { color: var(--accent); }
+
+.insight-box { background: var(--ink); color: var(--paper); padding: 1.1rem 1.1rem; margin-top: 1.5rem; }
+.insight-box h3 { font-family: var(--serif); font-size: 1rem; font-weight: 600; margin-bottom: 0.7rem; color: #fff; }
+.insight-list { list-style: none; }
+.insight-list li { font-size: 13px; padding: 5px 0 5px 1.3em; position: relative; color: #d8d0c4; line-height: 1.65; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.insight-list li:last-child { border-bottom: none; }
+.insight-list li::before { content: '→'; position: absolute; left: 0; top: 6px; color: var(--rose); font-size: 11px; }
+
+.footer { border-top: 1px solid var(--rule); padding: 1rem 1rem; display: flex; flex-direction: column; gap: 3px; font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 0.08em; }
+
+@media (min-width: 768px) {
+  .masthead { padding: 2.5rem 3rem 1.5rem; }
+  .body-wrap { padding: 2rem 3rem 4rem; }
+  .kpi-grid { grid-template-columns: repeat(4, 1fr); }
+  .kpi-item { border-bottom: none !important; }
+  .kpi-item:nth-child(odd) { border-right: 1px solid var(--rule) !important; }
+  .kpi-item:nth-child(4) { border-right: none !important; }
+  .footer { flex-direction: row; justify-content: space-between; padding: 1.25rem 3rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-top">
+    <div class="brand">HEIWEI母親節</div>
+    <div class="report-date">結案日期：2026/05/15<br>活動期間：04/23—05/13</div>
+  </div>
+  <div class="masthead-badge">🌸 母親節檔期活動</div>
+  <div class="masthead-title">母親節檔期<br><span>結案報告</span></div>
+  <div class="masthead-sub">04/23（三）— 05/13（三）｜共 21 天</div>
+</div>
+
+<div class="body-wrap">
+
+  <!-- KPI -->
+  <div class="section-label">核心指標總覽</div>
+  <div class="kpi-grid">
+    <div class="kpi-item">
+      <div class="kpi-label">成立訂單</div>
+      <div class="kpi-val">82</div>
+      <div class="kpi-sub">取消 5 筆不計</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">成立總銷售額</div>
+      <div class="kpi-val rose">$673,866</div>
+      <div class="kpi-sub">取消訂單不計入</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">付款率</div>
+      <div class="kpi-val teal">89.0%</div>
+      <div class="kpi-sub">已付款 73 筆／未付款 9 筆</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-label">平均客單價</div>
+      <div class="kpi-val gold">$8,218</div>
+      <div class="kpi-sub">最高 $30,607</div>
+    </div>
+  </div>
+
+  <!-- 4月 vs 5月 -->
+  <div class="section">
+    <div class="section-label">活動前半（4月）vs 母親節衝刺（5月）</div>
+    <div class="period-grid">
+      <div class="period-card april">
+        <div class="period-tag april">04/23 — 04/30 ｜ 前半段</div>
+        <div class="period-num" style="color:var(--gold);">$292,170</div>
+        <div class="period-sub">32 筆訂單 ／ 均單 $9,130</div>
+        <div style="margin-top:0.75rem;font-size:12px;color:var(--muted);">高峰：04/24（12筆 / $76,864）<br>04/27（6筆 / $61,098）</div>
+      </div>
+      <div class="period-card may">
+        <div class="period-tag may">05/01 — 05/13 ｜ 母親節衝刺</div>
+        <div class="period-num" style="color:var(--rose);">$381,696</div>
+        <div class="period-sub">50 筆訂單 ／ 均單 $7,634</div>
+        <div style="margin-top:0.75rem;font-size:12px;color:var(--muted);">高峰：05/11（8筆 / $75,833）<br>05/13（11筆 / $65,560）</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 每日趨勢 -->
+  <div class="section">
+    <div class="section-label">每日訂單趨勢</div>
+    <div class="two-col">
+      <div class="chart-card">
+        <div class="card-title">每日訂單數 &amp; 銷售額</div>
+        <div class="chart-wrap"><canvas id="dailyChart"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="card-title">每日付款狀態</div>
+        <table class="data-table">
+          <thead><tr><th>日期</th><th class="nr">訂單</th><th class="nr">已付</th><th class="nr">未付</th><th class="nr">付款率</th></tr></thead>
+          <tbody>
+            <tr><td>04/23</td><td class="nr">3</td><td class="nr">3</td><td class="nr">0</td><td class="nr" style="color:var(--teal)">100%</td></tr>
+            <tr><td>04/24</td><td class="nr">12</td><td class="nr">11</td><td class="nr">1</td><td class="nr" style="color:var(--teal)">92%</td></tr>
+            <tr><td>04/25</td><td class="nr">1</td><td class="nr">0</td><td class="nr">1</td><td class="nr" style="color:var(--accent)">0%</td></tr>
+            <tr><td>04/26</td><td class="nr">2</td><td class="nr">2</td><td class="nr">0</td><td class="nr" style="color:var(--teal)">100%</td></tr>
+            <tr><td>04/27</td><td class="nr">6</td><td class="nr">6</td><td class="nr">0</td><td class="nr" style="color:var(--teal)">100%</td></tr>
+            <tr><td>04/28</td><td class="nr">5</td><td class="nr">5</td><td class="nr">0</td><td class="nr" style="color:var(--teal)">100%</td></tr>
+            <tr><td>04/29</td><td class="nr">1</td><td class="nr">1</td><td class="nr">0</td><td class="nr" style="color:var(--teal)">100%</td></tr>
+            <tr><td>04/30</td><td class="nr">2</td><td class="nr">2</td><td class="nr">0</td><td class="nr" style="color:var(--teal)">100%</td></tr>
+            <tr><td>05/01</td><td class="nr">4</td><td class="nr">4</td><td class="nr">0</td><td class="nr" style="color:var(--teal)">100%</td></tr>
+            <tr><td>05/02</td><td class="nr">6</td><td class="nr">6</td><td class="nr">0</td><td class="nr" style="color:var(--teal)">100%</td></tr>
+            <tr><td>05/04–05/10</td><td class="nr">17</td><td class="nr">16</td><td class="nr">1</td><td class="nr" style="color:var(--teal)">94%</td></tr>
+            <tr><td>05/11</td><td class="nr">8</td><td class="nr">6</td><td class="nr">2</td><td class="nr" style="color:var(--gold)">75%</td></tr>
+            <tr><td>05/12</td><td class="nr">4</td><td class="nr">4</td><td class="nr">0</td><td class="nr" style="color:var(--teal)">100%</td></tr>
+            <tr><td>05/13 末日</td><td class="nr">11</td><td class="nr">7</td><td class="nr">4</td><td class="nr" style="color:var(--accent)">64%</td></tr>
+            <tr class="tot"><td>合計</td><td class="nr">82</td><td class="nr">73</td><td class="nr">9</td><td class="nr">89.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 取消訂單 -->
+  <div class="section">
+    <div class="section-label">取消 &amp; 異常訂單（共 5 筆 / 涉及 $53,554）</div>
+    <div class="cancel-grid">
+      <div class="cancel-card">
+        <div class="cancel-name">王嘉吟</div>
+        <div class="cancel-meta">04/27 00:40 ｜ #20260426164040282</div>
+        <div class="cancel-amt">$10,800</div>
+        <span class="cancel-tag tag-refund">已退款</span>
+        <div style="font-size:11px;color:var(--muted);margin-top:6px;">付款後申請退款，款項已退回。</div>
+      </div>
+      <div class="cancel-card">
+        <div class="cancel-name">陳瓊如</div>
+        <div class="cancel-meta">04/23 21:17 ｜ #20260423131715009</div>
+        <div class="cancel-amt">$14,527</div>
+        <span class="cancel-tag tag-unpaid">未付款取消</span>
+        <div style="font-size:11px;color:var(--muted);margin-top:6px;">下單後未完成付款，系統自動取消。</div>
+      </div>
+      <div class="cancel-card">
+        <div class="cancel-name">彭于倢</div>
+        <div class="cancel-meta">04/30 23:07 ｜ #20260430150708960</div>
+        <div class="cancel-amt">$6,378</div>
+        <span class="cancel-tag tag-unpaid">未付款取消</span>
+        <div style="font-size:11px;color:var(--muted);margin-top:6px;">未付款取消後重新下單，已於 05/01 成立。</div>
+      </div>
+      <div class="cancel-card">
+        <div class="cancel-name">李梓萱</div>
+        <div class="cancel-meta">04/30 16:24 ｜ #20260430082418930</div>
+        <div class="cancel-amt">$6,620</div>
+        <span class="cancel-tag tag-fail">付款失敗</span>
+        <div style="font-size:11px;color:var(--muted);margin-top:6px;">付款失敗後重新下單，同日 04/30 已成立。</div>
+      </div>
+      <div class="cancel-card">
+        <div class="cancel-name">林沛吟</div>
+        <div class="cancel-meta">05/13 23:55 ｜ #20260513155509565</div>
+        <div class="cancel-amt">$15,229</div>
+        <span class="cancel-tag tag-fail">付款失敗</span>
+        <div style="font-size:11px;color:var(--muted);margin-top:6px;">末日付款失敗，金額最大，<strong>建議主動聯繫確認是否補單</strong>。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 商品排行 -->
+  <div class="section">
+    <div class="section-label">商品銷售排行（排除贈品）</div>
+    <div class="chart-card">
+      <div class="card-title">各商品銷售金額</div>
+      <div id="prodBars"></div>
+      <table class="data-table" style="margin-top:0.8rem;">
+        <thead><tr><th>商品名稱</th><th class="nr">訂單數</th><th class="nr">數量</th><th class="nr">金額</th><th class="nr">佔比</th></tr></thead>
+        <tbody id="prodTable"></tbody>
+      </table>
+      <div class="gift-box">
+        <div class="gift-box-title">🎁 滿額贈品出貨統計</div>
+        <div class="gift-row"><span>身體去角質磨砂+蜜蜜霜+洗面乳</span><span style="font-family:var(--mono);font-size:11px;">14 份</span></div>
+        <div class="gift-row"><span>亮白水150ml+爆白防曬</span><span style="font-family:var(--mono);font-size:11px;">12 份</span></div>
+        <div class="gift-row"><span>大旅行組</span><span style="font-family:var(--mono);font-size:11px;">9 份</span></div>
+        <div class="gift-row"><span>身體去角質磨砂+蜜蜜霜+洗面乳+香氛花(中)</span><span style="font-family:var(--mono);font-size:11px;">2 份</span></div>
+        <div class="gift-row" style="font-weight:600;"><span>合計</span><span style="font-family:var(--mono);font-size:11px;">37 份</span></div>
+      </div>
+    </div>
+  </div>
+
+    <!-- 備註分析 -->
+  <div class="section">
+    <div class="section-label">訂單備註（共 8 筆，分 5 類）</div>
+
+    <div class="note-group">
+      <div class="note-group-header">
+        <div class="note-group-title">① 滿額贈想換旅行組</div>
+        <div class="note-group-right">
+          <span class="note-count">1 筆</span>
+          <span class="action-tag action-needed">⚠️ 需回覆</span>
+        </div>
+      </div>
+      <div class="note-content">「滿額贈可以換成兩組旅行組嗎？」</div>
+      <div class="note-orders">
+        <div class="note-row"><span>施紫諾</span><div class="note-row-right"><span>$10,800</span><span class="note-row-date">04/27 ｜ 已完成</span></div></div>
+      </div>
+    </div>
+
+    <div class="note-group">
+      <div class="note-group-header">
+        <div class="note-group-title">② 補差額湊滿額贈</div>
+        <div class="note-group-right">
+          <span class="note-count">1 筆</span>
+          <span class="action-tag action-needed">⚠️ 需確認處理</span>
+        </div>
+      </div>
+      <div class="note-content">「您幫我備註 補差額湊滿額贈 即可」</div>
+      <div class="note-orders">
+        <div class="note-row"><span>翁馨怡</span><div class="note-row-right"><span>$4,980</span><span class="note-row-date">04/28 ｜ 已完成</span></div></div>
+      </div>
+    </div>
+
+    <div class="note-group">
+      <div class="note-group-header">
+        <div class="note-group-title">③ 詢問是否附旅行組贈品</div>
+        <div class="note-group-right">
+          <span class="note-count">2 筆（含 1 筆取消）</span>
+          <span class="action-tag action-needed">⚠️ 需確認回覆</span>
+        </div>
+      </div>
+      <div class="note-content">「會送旅行組對嗎～～」</div>
+      <div class="note-orders">
+        <div class="note-row"><span class="status-cancel">李梓萱（已取消→同日重新下單成立）</span><div class="note-row-right"><span>$6,620</span><span class="note-row-date">04/30 ｜ 已取消</span></div></div>
+        <div class="note-row"><span>李梓萱（成立）</span><div class="note-row-right"><span>$6,620</span><span class="note-row-date">04/30 ｜ 已完成</span></div></div>
+      </div>
+    </div>
+
+    <div class="note-group">
+      <div class="note-group-header">
+        <div class="note-group-title">④ 生日送禮祝賀備註</div>
+        <div class="note-group-right">
+          <span class="note-count">1 筆</span>
+          <span class="action-tag action-done">✅ 紀錄用途</span>
+        </div>
+      </div>
+      <div class="note-content">「陳以葳～～～生日快樂❤️❤️ 我愛妳～～～也愛何謂美😘😘」</div>
+      <div class="note-orders">
+        <div class="note-row"><span>張嚴丰</span><div class="note-row-right"><span>$10,800</span><span class="note-row-date">05/01 ｜ 已完成</span></div></div>
+      </div>
+    </div>
+
+    <div class="note-group">
+      <div class="note-group-header">
+        <div class="note-group-title">⑤ 贈品不要爆白</div>
+        <div class="note-group-right">
+          <span class="note-count">1 筆</span>
+          <span class="action-tag action-needed">⚠️ 出貨需替換贈品</span>
+        </div>
+      </div>
+      <div class="note-content">「贈品不用爆白 謝謝」</div>
+      <div class="note-orders">
+        <div class="note-row"><span>謝妤婕</span><div class="note-row-right"><span>$12,118</span><span class="note-row-date">05/06 ｜ 已完成</span></div></div>
+      </div>
+    </div>
+
+    <div class="note-group">
+      <div class="note-group-header">
+        <div class="note-group-title">⑥ 滿額禮洗面乳想換其他商品</div>
+        <div class="note-group-right">
+          <span class="note-count">1 筆</span>
+          <span class="action-tag action-needed">⚠️ 需確認換贈</span>
+        </div>
+      </div>
+      <div class="note-content">「回購很多次！許願滿額禮的洗面乳可以換其他商品，不用等值，洗面乳用不習慣🥹謝謝」</div>
+      <div class="note-orders">
+        <div class="note-row"><span>許瑋庭</span><div class="note-row-right"><span>$18,958</span><span class="note-row-date">05/08 ｜ 已完成</span></div></div>
+      </div>
+      <div class="note-footer">回購顧客反映洗面乳贈品不適用，建議下次開團提供彈性換贈選項。</div>
+    </div>
+
+    <div class="note-group">
+      <div class="note-group-header">
+        <div class="note-group-title">⑦ 特殊出貨：寄飯店代收</div>
+        <div class="note-group-right">
+          <span class="note-count">1 筆</span>
+          <span class="action-tag action-needed">⚠️ 包裹需加寫備註</span>
+        </div>
+      </div>
+      <div class="note-content">「请在包裹上備註 Jean Tan #2603280112 — 寄至誠品行旅（eslite hotel），由飯店代收。」</div>
+      <div class="note-orders">
+        <div class="note-row"><span>Jean Tan #2603280112</span><div class="note-row-right"><span>$22,622</span><span class="note-row-date">05/05 ｜ 已完成</span></div></div>
+      </div>
+      <div class="note-footer">包裹外箱需標註收件人姓名（Jean Tan #2603280112）及誠品行旅地址，飯店方可正確代收。</div>
+    </div>
+
+  </div>
+
+  <!-- 洞察 -->
+  <div class="insight-box">
+    <h3>結案重點洞察</h3>
+    <ul class="insight-list">
+      <li>本次活動 21 天共成立 82 筆，總銷售額 $673,866，平均客單價 $8,218，客層消費力強，付款率 89% 表現優異。</li>
+      <li>5 筆取消訂單中 2 筆客戶已重新下單成立，實際損失僅退款 1 筆（$10,800）；末日付款失敗的林沛吟（$15,229）建議主動聯繫確認補單。</li>
+      <li>明星三姊妹以 $194,400（28.9%）穩居絕對主力，是下次必保核心商品。</li>
+      <li>共 8 筆訂單留有備註，涵蓋：贈品換旅行組（1筆）、補差額湊滿額贈（1筆）、詢問旅行組贈品（2筆含1筆取消）、生日祝賀（1筆）、贈品不要爆白（1筆）、洗面乳換贈品（1筆）、飯店代收（1筆）。</li>
+      <li>謝妤婕的爆白贈品替換及 Jean Tan 包裹飯店備註，出貨前需個別確認核對。</li>
+      <li>許瑋庭反映滿額贈洗面乳不適用，雖只有 1 筆明確備註，建議下次開團提供更彈性的贈品換贈選項。</li>
+      <li>李梓萱因付款問題取消後重新下單，張嚴丰留生日祝賀備註，均屬紀錄性質，無需特別處理。</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer">
+  <span>HEIWEI母親節 · 母親節檔期活動｜04/23–05/13</span>
+  <span>結案報告 · 產生日期 2026/05/15</span>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const prods = [
+  {n:'明星三姊妹',         ord:18, q:18, a:194400},
+  {n:'活氧B群保濕噴霧*5',  ord:16, q:18, a:62880},
+  {n:'十秒保養組',         ord:15, q:18, a:50400},
+  {n:'水安瓶500ml',        ord:4,  q:4,  a:48000},
+  {n:'全能經典禮盒',       ord:9,  q:11, a:44820},
+  {n:'亮白水300ml*2',      ord:11, q:11, a:43978},
+  {n:'蜜蜜霜200ml',        ord:7,  q:8,  a:34993},
+  {n:'洗面乳*3',           ord:10, q:11, a:23800},
+  {n:'365保養組',          ord:1,  q:1,  a:21199},
+  {n:'補水急救組',         ord:7,  q:11, a:18543},
+  {n:'密集修護面膜20片',   ord:4,  q:6,  a:13440},
+  {n:'白膜淨去角質泥膜*3', ord:3,  q:3,  a:12549},
+  {n:'其他',               ord:'—',q:'—',a:104864},
+];
+const totalAmt = 673866;
+
+const barsEl = document.getElementById('prodBars');
+prods.filter(p=>p.a>0).forEach(p => {
+  const pct = (p.a/totalAmt*100).toFixed(1);
+  const color = p.n==='明星三姊妹' ? '#c45c7a' : p.n==='其他' ? '#c8bfad' : '#b5872a';
+  barsEl.innerHTML += `<div class="bar-row"><div class="bar-label">${p.n}</div><div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${color}"></div></div><div class="bar-num">$${(p.a/1000).toFixed(0)}k (${pct}%)</div></div>`;
+});
+
+const prodTbl = document.getElementById('prodTable');
+prods.forEach(p => {
+  const pct = (p.a/totalAmt*100).toFixed(1);
+  const tr = document.createElement('tr');
+  tr.innerHTML = `<td>${p.n}</td><td class="nr">${p.ord}</td><td class="nr">${p.q}</td><td class="nr">$${p.a.toLocaleString()}</td><td class="nr">${pct}%</td>`;
+  if(p.n==='其他') tr.style.color='var(--muted)';
+  prodTbl.appendChild(tr);
+});
+const totTr = document.createElement('tr');
+totTr.className='tot';
+totTr.innerHTML=`<td>合計</td><td class="nr">82</td><td class="nr">—</td><td class="nr">$673,866</td><td class="nr">100%</td>`;
+prodTbl.appendChild(totTr);
+
+const labels=['04/23','04/24','04/25','04/26','04/27','04/28','04/29','04/30','05/01','05/02','05/04','05/05','05/06','05/07','05/08','05/09','05/10','05/11','05/12','05/13'];
+const orders_d=[3,12,1,2,6,5,1,2,4,6,1,1,3,4,2,3,3,8,4,11];
+const sales_d=[50183,76864,6170,20389,61098,58586,7200,11680,29620,58975,3360,22622,24357,14698,22218,19118,20049,75833,25286,65560];
+
+new Chart(document.getElementById('dailyChart'),{
+  type:'bar',
+  data:{labels,datasets:[
+    {label:'銷售額',data:sales_d,backgroundColor:labels.map(l=>l.startsWith('05')?'#c45c7a':'#b5872a'),borderRadius:2,borderSkipped:false,yAxisID:'y1'},
+    {label:'訂單數',data:orders_d,type:'line',borderColor:'#2a7c6f',backgroundColor:'transparent',pointBackgroundColor:'#2a7c6f',pointRadius:3,tension:0.3,yAxisID:'y2'}
+  ]},
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:true,labels:{font:{size:10},boxWidth:10,padding:10}}},
+    scales:{
+      y1:{beginAtZero:true,ticks:{font:{size:10},callback:v=>'$'+(v/1000).toFixed(0)+'k'}},
+      y2:{beginAtZero:true,position:'right',ticks:{font:{size:10}},grid:{display:false}},
+      x:{ticks:{font:{size:9},maxRotation:45,minRotation:45}}
+    }
+  }
+});
+</script>
+</body>
+</html>
