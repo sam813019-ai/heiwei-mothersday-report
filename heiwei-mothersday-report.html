@@ -410,21 +410,32 @@ body { background: var(--paper); color: var(--ink); font-family: var(--sans); fo
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 const prods = [
-  {n:'明星三姊妹',         ord:18, q:18, a:194400},
-  {n:'活氧B群保濕噴霧*5',  ord:16, q:18, a:62880},
-  {n:'十秒保養組',         ord:15, q:18, a:50400},
-  {n:'水安瓶500ml',        ord:4,  q:4,  a:48000},
-  {n:'全能經典禮盒',       ord:9,  q:11, a:44820},
-  {n:'亮白水300ml*2',      ord:11, q:11, a:43978},
-  {n:'蜜蜜霜200ml',        ord:7,  q:8,  a:34993},
-  {n:'洗面乳*3',           ord:10, q:11, a:23800},
-  {n:'365保養組',          ord:1,  q:1,  a:21199},
-  {n:'補水急救組',         ord:7,  q:11, a:18543},
-  {n:'密集修護面膜20片',   ord:4,  q:6,  a:13440},
-  {n:'白膜淨去角質泥膜*3', ord:3,  q:3,  a:12549},
-  {n:'其他',               ord:'—',q:'—',a:104864},
+  {n:'明星三姊妹',                      ord:18, q:18, a:194400},
+  {n:'活氧B群保濕噴霧*5',               ord:16, q:18, a:62880},
+  {n:'十秒保養組',                      ord:15, q:18, a:50400},
+  {n:'水安瓶500ml',                     ord:4,  q:4,  a:48000},
+  {n:'全能經典禮盒',                    ord:9,  q:11, a:44820},
+  {n:'亮白水300ml*2',                   ord:11, q:11, a:43978},
+  {n:'蜜蜜霜200ml',                     ord:7,  q:8,  a:34993},
+  {n:'洗面乳*3',                        ord:10, q:11, a:23800},
+  {n:'365保養組',                       ord:1,  q:1,  a:21199},
+  {n:'補水急救組',                      ord:7,  q:11, a:18543},
+  {n:'密集修護組光透波5D養膚面膜(20片)', ord:4,  q:6,  a:13440},
+  {n:'白膜淨去角質泥膜*3',              ord:3,  q:3,  a:12549},
+  {n:'魚子亮白保濕化妝水',              ord:4,  q:6,  a:9600},
+  {n:'膠囊*5盒',                        ord:2,  q:2,  a:8500},
+  {n:'活氧B群保濕噴霧',                 ord:6,  q:6,  a:6340},
+  {n:'懶人兩步組',                      ord:3,  q:3,  a:5247},
+  {n:'潔淨舒壓洗面乳',                  ord:5,  q:5,  a:4700},
+  {n:'爆白防曬隔離噴霧',                ord:6,  q:7,  a:3935},
+  {n:'重啟白光禮盒',                    ord:1,  q:1,  a:3890},
+  {n:'白膜淨去角質泥膜',                ord:2,  q:2,  a:3540},
+  {n:'光透波5D養膚面膜',                ord:2,  q:2,  a:2520},
+  {n:'高端精華水安瓶',                  ord:1,  q:2,  a:1980},
+  {n:'獨家3入爆白防護隔離噴霧(150ml)',   ord:1,  q:1,  a:1455},
+  {n:'光透波5D養敷面膜1片',             ord:4,  q:4,  a:720},
 ];
-const totalAmt = 673866;
+const totalAmt = 621429;
 
 const barsEl = document.getElementById('prodBars');
 prods.filter(p=>p.a>0).forEach(p => {
@@ -443,7 +454,7 @@ prods.forEach(p => {
 });
 const totTr = document.createElement('tr');
 totTr.className='tot';
-totTr.innerHTML=`<td>合計</td><td class="nr">82</td><td class="nr">—</td><td class="nr">$673,866</td><td class="nr">100%</td>`;
+totTr.innerHTML=`<td>合計</td><td class="nr">82</td><td class="nr">—</td><td class="nr">$621,429</td><td class="nr">100%</td>`;
 prodTbl.appendChild(totTr);
 
 const labels=['04/23','04/24','04/25','04/26','04/27','04/28','04/29','04/30','05/01','05/02','05/04','05/05','05/06','05/07','05/08','05/09','05/10','05/11','05/12','05/13'];
